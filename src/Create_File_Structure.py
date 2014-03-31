@@ -12,6 +12,10 @@ Linux_OS = {
         'default': 'package',
         }
 
+def mkdir(filename):
+    folder = os.path.dirname(filename)
+    if not os.path.exists(folder):
+        os.makedirs(folder)
 
 for k, v in Linux_OS.iteritems():
     if k == 'Type':
